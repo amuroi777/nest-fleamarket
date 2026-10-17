@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
+import { ItemsModule } from './items/items.module.js';
 
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
@@ -13,6 +14,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       appSecret: 'YOUR_APP_SECRET',
       serviceId: 'nest-fleamarket',
     }),
+    ItemsModule,
   ],
   controllers: [],
   providers: [],
