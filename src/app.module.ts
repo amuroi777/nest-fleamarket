@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { createObserveModule } from '@nestjs/observe';
 import { ItemsModule } from './items/items.module.js';
 import { PrismaModule } from './prisma/prisma.module.js';
+import { AuthModule } from './auth/auth.module.js';
 
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
@@ -17,6 +18,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
     }),
     ItemsModule,
     PrismaModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
